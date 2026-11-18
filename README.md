@@ -1,4 +1,4 @@
-A# Control de inventario TecnoPunto
+ **Control de inventario TecnoPunto**
 
 **Autores:** [Daniel Eduardo Dupuy 2024-3865. Eddy Antonio Mora Díaz 0224-2026.  Edward Alberto Morel Ramirez 2025-1672.  ]  
 
