@@ -1,8 +1,8 @@
 A# Control de inventario TecnoPunto
 
-**Autor:** [Tu nombre]  
-**Matrícula:** [Tu matrícula]  
-**Asignatura:** Clases, objetos y propiedades  
+**Autores:** [Daniel Eduardo Dupuy 2024-3865. Eddy Antonio Mora Díaz 0224-2026.  Edward Alberto Morel Ramirez 2025-1672.  ]  
+
+**Tema:** Clases, objetos y propiedades  
 **Profesor:** Gamalier Reyes del Carmen
 
 ## Descripción
