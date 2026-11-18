@@ -1,0 +1,71 @@
+using System;
+
+namespace TecnoPunto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Tres variables separadas, sin arreglos ni colecciones.
+            Producto p1 = LeerProducto(1);
+            Producto p2 = LeerProducto(2);
+            Producto p3 = LeerProducto(3);
+
+            Console.WriteLine("=== INVENTARIO REGISTRADO ===");
+            MostrarProducto(p1);
+            MostrarProducto(p2);
+            MostrarProducto(p3);
+
+            Console.WriteLine();
+            Console.WriteLine("Presione una tecla para salir.");
+            Console.ReadKey();
+        }
+
+        // Muestra un producto separado por una línea.
+        static void MostrarProducto(Producto p)
+        {
+            Console.WriteLine();
+            Console.WriteLine("--------------------------");
+            p.MostrarInfo();
+        }
+
+        // Pide los datos y repite hasta que sean válidos.
+        static Producto LeerProducto(int numero)
+        {
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Producto #" + numero);
+
+                    Console.Write("Código: ");
+                    string codigo = Console.ReadLine();
+
+                    Console.Write("Nombre: ");
+                    string nombre = Console.ReadLine();
+
+                    Console.Write("Precio: ");
+                    decimal precio;
+                    if (!decimal.TryParse(Console.ReadLine(), out precio))
+                        throw new ArgumentException("El precio debe ser un número.");
+
+                    Console.Write("Cantidad: ");
+                    int cantidad;
+                    if (!int.TryParse(Console.ReadLine(), out cantidad))
+                        throw new ArgumentException("La cantidad debe ser un número entero.");
+
+                    // Aquí se ejecutan las validaciones de las propiedades.
+                    return new Producto(codigo, nombre, precio, cantidad);
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Error: " + ex.Message);
+                    Console.WriteLine("Por favor, intente nuevamente.");
+                    Console.WriteLine();
+                }
+            }
+        }
+    }
+}
