@@ -1,7 +1,9 @@
  **Control de inventario TecnoPunto**
 
 **Autores:** 
+
 [Daniel Eduardo Dupuy 2024-3865. 
+
 Edward Alberto Morel Ramirez 2025-1672.  ]  
 
 **Tema:** Clases, objetos y propiedades  
